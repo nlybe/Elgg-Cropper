@@ -3,7 +3,7 @@ Elgg Cropper
 
 ![Elgg 2.1](https://img.shields.io/badge/Elgg-2.1-orange.svg?style=flat-square)
 
-jQuery image cropping tool for Elgg, integrating the JS library [Cropper](https://fengyuanchen.github.io/cropper/)
+jQuery image cropping tool for Elgg, integrating the JS library [Cropper](https://fengyuanchen.github.io/cropper/).
 
 Cropper plugin replace the default core Elgg profile avatar cropping tool.
 

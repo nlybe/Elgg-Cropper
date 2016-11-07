@@ -1,0 +1,54 @@
+/**
+ * Cropper jQuery image tool for Elgg
+ * @package cropper 
+ */
+
+.cropper_tool img {
+  max-width: 100%; /* This rule is very important, please do not ignore this! */
+}
+
+.cropper_tool .docs-preview .img-preview {
+  background-color: #f7f7f7;
+  width: 100%;
+  text-align: center;
+}
+
+.cropper_tool .docs-preview {
+  margin-right: -15px;
+  margin-top: 15px;
+}
+
+.cropper_tool .docs-preview .img-preview {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.cropper_tool .docs-preview .img-preview > img {
+  max-width: 100%;
+}
+
+.cropper_tool .docs-preview .preview-lg {
+  width: 263px;
+  height: 148px;
+}
+
+.cropper_tool .docs-preview .preview-md {
+  width: 139px;
+  height: 78px;
+}
+
+.cropper_tool .docs-preview .preview-sm {
+  width: 69px;
+  height: 39px;
+}
+
+.cropper_tool .docs-preview .preview-xs {
+  width: 35px;
+  height: 20px;
+  margin-right: 0;
+}
+
+
+

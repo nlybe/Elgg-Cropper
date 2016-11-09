@@ -1,7 +1,7 @@
 Elgg Cropper
-================
+============
 
-![Elgg 2.1](https://img.shields.io/badge/Elgg-2.1-orange.svg?style=flat-square)
+![Elgg 2.1+](https://img.shields.io/badge/Elgg-2.1-orange.svg?style=flat-square)
 
 Responsive image cropping tool for Elgg, based on jQuery and integrating the JS library [Cropper](https://fengyuanchen.github.io/cropper/).
 

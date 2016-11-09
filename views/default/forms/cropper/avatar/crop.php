@@ -15,9 +15,10 @@ $master_img = elgg_view('output/img', array(
     'id' => 'image',
 ));
 
+// assign photo to cropper input
 $vars['image_to_crop'] = $master_img;
 
-echo elgg_view('forms/cropper/cropper', $vars)
+echo elgg_view_input('cropper', $vars);
 ?>
 
 <div class="elgg-foot">

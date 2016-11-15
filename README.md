@@ -31,7 +31,8 @@ The cropper input can be used in any Elgg form, passing just the image to crop a
 $vars['image_to_crop'] = $master_img;
 
 // optionally assign custom aspectratio to overide the aspectratio in settings
-// set blank for free ratio, enter number or put in comments so it will retrieve aspectratio from settings
+// set blank for free ratio, enter number
+// if put this line commented, the option value from settings will be used
 $vars['aspectratio'] = '';
 
 echo elgg_view_input('cropper', $vars);

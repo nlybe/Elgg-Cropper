@@ -17,3 +17,4 @@ Cropper plugin replace the default core Elgg profile avatar cropping tool.
 
 ## Future Tasks List
 - [ ] Pass as parameters in cropper form the same options for custom use of cropping tool
+- [ ] Put size of preview box in settings

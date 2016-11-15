@@ -19,9 +19,9 @@ $master_img = elgg_view('output/img', array(
 $vars['image_to_crop'] = $master_img;
 
 // optionally assign custom aspectratio to overide the aspectratio in settings
-// set blank for free ratio, enter number
-// if put this line commented, the option value from settings will be used
-$vars['aspectratio'] = '';
+// set blank for free ratio or enter number
+// if put comment the following line, the aspectratio value from settings will be used
+// $vars['aspectratio'] = '';
 
 echo elgg_view_input('cropper', $vars);
 ?>

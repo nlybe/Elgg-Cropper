@@ -1,0 +1,15 @@
+/**
+ * Cropper jQuery image tool for Elgg
+ * @package cropper 
+ */
+
+ul li label {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+.aspectratio .elgg-field .elgg-field {
+    width: 45px;
+    display: inline-block;
+    margin-bottom: 2px;
+}

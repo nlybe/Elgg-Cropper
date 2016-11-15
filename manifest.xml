@@ -3,7 +3,7 @@
     <name>Image Cropper Tool</name>
     <id>cropper</id>
     <author>Nikos Lyberakis</author>
-    <version>2.1.0</version>
+    <version>2.1.1</version>
     <category>bundled</category>
     <category>content</category>
     <description>Cropper jQuery image cropping tool for Elgg</description>

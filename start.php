@@ -13,6 +13,7 @@ function cropper_init() {
     
     // extend css
     elgg_extend_view("css/elgg", "cropper/cropper.css");
+    elgg_extend_view('css/admin', 'cropper/cropper_admin.css');
     elgg_register_css('cropper_css', '//cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css');
 
     // extend JS
@@ -24,10 +25,8 @@ function cropper_init() {
         'exports' => 'cropper_js',
     ));    
     
-    // replace jquery lib
-//    elgg_unregister_js ('jquery');
-//    elgg_register_js('jquery_1.9.1', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js', 'head');
-//    elgg_load_js("jquery_1.9.1");
+    // register plugin settings view
+    elgg_register_simplecache_view('cropper/settings.js'); 
 
     // Register actions
     $action_path = elgg_get_plugins_path() . 'cropper/actions/cropper';

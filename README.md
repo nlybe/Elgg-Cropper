@@ -12,7 +12,8 @@ Cropper plugin replace the default core Elgg profile avatar cropping tool.
 - Supports touch (mobile)
 - Supports to crop on a canvas
 - Responsive
+- Option to add cropper as a form input 
+- Plenty of Cropper tool options available on plugin settings
 
 ## Future Tasks List
-- [ ] Add more options of Cropper tool in plugin settings
 - [ ] Pass as parameters in cropper form the same options for custom use of cropping tool

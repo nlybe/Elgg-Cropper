@@ -9,6 +9,8 @@ elgg_load_css('cropper_css');
 
 $master_img = $vars['image_to_crop'];
 
+$plugin_settings = elgg_get_plugin_from_id('cropper')->getAllSettings();
+$preview_size = elgg_extract('preview_size', $plugin_settings, 'lg')
 ?>
 
 <div class="cropper_tool">
@@ -18,7 +20,7 @@ $master_img = $vars['image_to_crop'];
 
     <div class="docs-preview clearfix">
         <div id="user-avatar-preview-title"><label><?php echo elgg_echo('avatar:preview'); ?></label></div>
-        <div class="img-preview preview-lg"></div>
+        <div class="img-preview preview-<?php echo $preview_size; ?>"></div>
   <?php /*
   <div class="img-preview preview-md"></div>
   <div class="img-preview preview-sm"></div>

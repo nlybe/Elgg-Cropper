@@ -10,8 +10,16 @@ $language = array(
     'avatar:create:instructions' => 'Click and drag a square below to match how you want your avatar cropped. A preview will appear below the box. When you are happy with the preview, click \'Create your avatar\'. This cropped version will be used throughout the site as your avatar.',
     
     // settings
+    'cropper:settings:general_settings:title' => 'General Settings',
+    'cropper:settings:preview_size' => 'Preview Size',
+    'cropper:settings:preview_size:help' => 'Select the size of preview image.',
+    'cropper:settings:preview_size:lg' => 'Large',
+    'cropper:settings:preview_size:md' => 'Medium',
+    'cropper:settings:preview_size:sm' => 'Small',
+    'cropper:settings:preview_size:xs' => 'Extra Small',
+    
     'cropper:settings:basic_settings:title' => 'Basic Cropper Options',
-    'cropper:settings:basic_settings:intro' => 'Basic options as offered from <a href="https://github.com/fengyuanchen/cropper" target="_blank">jQuery image cropping plugin</a>.',
+    'cropper:settings:basic_settings:intro' => 'Basic options as offered from <a href="https://github.com/fengyuanchen/cropper" target="_blank">jQuery image cropping plugin</a>. Check <a href="https://github.com/fengyuanchen/cropper#options" target="_blank">documentation</a> for more details.',
     'cropper:settings:viewmode' => 'View Mode',
     'cropper:settings:viewmode:0' => 'The crop box is just within the container',
     'cropper:settings:viewmode:1' => 'The crop box should be within the canvas',

@@ -6,6 +6,28 @@
 
 $plugin = elgg_get_plugin_from_id('cropper');
 
+$preview_options = array(
+    elgg_echo('cropper:settings:preview_size:lg') => 'lg',
+    elgg_echo('cropper:settings:preview_size:md') => 'md',
+    elgg_echo('cropper:settings:preview_size:sm') => 'sm',
+    elgg_echo('cropper:settings:preview_size:xs') => 'xs',
+);
+$general_settings .= elgg_format_element('div', [], elgg_view_input('radio', array(
+    'id' => 'preview_size',
+    'name' => 'params[preview_size]',
+    'label' => elgg_echo('cropper:settings:preview_size'),
+    'options' => $preview_options,
+    'value' => (isset($plugin->preview_size) ? $plugin->preview_size : 'lg'),
+    'help' => elgg_echo('cropper:settings:preview_size:help'),
+)));
+
+$title = elgg_format_element('h3', [], elgg_echo('cropper:settings:general_settings:title'));
+echo elgg_view_module('inline', '', $general_settings, ['header' => $title]);
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 $basic_settings .= elgg_format_element('div', ['style' => 'margin: 0 0 15px;'], elgg_echo('cropper:settings:basic_settings:intro'));
 
 $viewmode_options = array(

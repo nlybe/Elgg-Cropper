@@ -7,8 +7,6 @@ define(function (require) {
     var cropper_settings = require("cropper/settings");
     var viewmode = cropper_settings['viewmode'],
         dragmode = cropper_settings['dragmode'],
-        aspectratio_1 = cropper_settings['aspectratio_1'],
-        aspectratio_2 = cropper_settings['aspectratio_2'],
         responsive = cropper_settings['responsive'],
         restore = cropper_settings['restore'],
         modal = cropper_settings['modal'],
@@ -29,6 +27,18 @@ define(function (require) {
         cropboxresizable = cropper_settings['cropboxresizable'],
         toggledragmodeondblclick = cropper_settings['toggledragmodeondblclick'];
    
+    var aspectratio;
+    if ($("input[name*='aspectratio']").length) {
+        aspectratio = Number($("input[name*='aspectratio']").val());
+    }
+    else {
+        var aspectratio_1 = cropper_settings['aspectratio_1'],
+            aspectratio_2 = cropper_settings['aspectratio_2'];
+        
+        aspectratio = aspectratio_1/aspectratio_2;
+    }
+    console.log(aspectratio);
+    
     $(document).ready(function() {
 
         var imageBox = $('#image');
@@ -42,26 +52,26 @@ define(function (require) {
             preview: '.img-preview',
             viewMode: parseInt(viewmode),
             dragMode: dragmode,
-            aspectRatio: aspectratio_1/aspectratio_2,
-            responsive: responsive==='on'?true:false,
-            restore: restore==='on'?true:false,
-            modal: modal==='on'?true:false,
-            guides: guides==='on'?true:false,
-            center: center==='on'?true:false,
-            highlight: highlight==='on'?true:false,
-            background: background==='on'?true:false,
-            autoCrop: autocrop==='on'?true:false,
+            aspectRatio: aspectratio,
+            responsive: getOptionValue(responsive),
+            restore: getOptionValue(restore),
+            modal: getOptionValue(modal),
+            guides: getOptionValue(guides),
+            center: getOptionValue(center),
+            highlight: getOptionValue(highlight),
+            background: getOptionValue(background),
+            autoCrop: getOptionValue(autocrop),
             autoCropArea: Number(autocroparea),
-            movable: movable==='on'?true:false,
-            rotatable: rotatable==='on'?true:false,
-            scalable: scalable==='on'?true:false,
-            zoomable: zoomable==='on'?true:false,
-            zoomOnTouch: zoomontouch==='on'?true:false,
-            zoomOnWheel: zoomonwheel==='on'?true:false,
+            movable: getOptionValue(movable),
+            rotatable: getOptionValue(rotatable),
+            scalable: getOptionValue(scalable),
+            zoomable: getOptionValue(zoomable),
+            zoomOnTouch: getOptionValue(zoomontouch),
+            zoomOnWheel: getOptionValue(zoomonwheel),
             wheelZoomRatio: Number(wheelzoomratio),
-            cropBoxMovable: cropboxmovable==='on'?true:false,
-            cropBoxResizable: cropboxresizable==='on'?true:false,
-            toggleDragModeOnDblclick: toggledragmodeondblclick==='on'?true:false,
+            cropBoxMovable: getOptionValue(cropboxmovable),
+            cropBoxResizable: getOptionValue(cropboxresizable),
+            toggleDragModeOnDblclick: getOptionValue(toggledragmodeondblclick),
             crop: function (e) {
                 $( "input[name='x1']" ).val(Math.round(e.x));
                 $( "input[name='x2']" ).val(Math.round(e.x)+Math.round(e.width));
@@ -86,3 +96,21 @@ define(function (require) {
     });
     
 });
+
+/**
+ * Get option values as comes from settings and return the right value for using in JS Cropper option
+ * 
+ * @param {type} c_option
+ * @returns {Boolean}
+ */
+function getOptionValue(c_option) {
+    if (c_option) {
+        return true;
+    }
+    else if (c_option === 'on') {
+        return true;
+    }
+    
+    
+    return false;
+}

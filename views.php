@@ -6,6 +6,6 @@
 
 return [
     'default' => [
-        'cropper/icon/' => __DIR__ . '/graphics',
+        
     ],
 ];

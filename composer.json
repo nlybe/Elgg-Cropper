@@ -1,12 +1,26 @@
 {
     "name": "nlybe/cropper",
+    "description": "Cropper jQuery image cropping tool for Elgg",
     "type": "elgg-plugin",
+    "keywords": [
+        "elgg",
+        "plugin",
+        "cropper"
+    ],
+    "homepage": "https://github.com/nlybe/Elgg-Cropper",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Nikos Lyberakis",
+            "email": "nikos@lyberakis.gr",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "composer/installers": ">=1.0.8"
-    },
-    "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.6",
         "composer/installers": ">=1.0.8"
     },        
-    "license": "GPL-2.0"
+    "extra": {
+        "installer-name": "cropper"
+    }
 }

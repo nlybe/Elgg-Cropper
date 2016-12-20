@@ -28,6 +28,12 @@ The cropper input can be used in any Elgg form, passing just the image to crop a
 
 ```php
 // assign photo to cropper input
+$master_img = elgg_view('output/img', array(
+    'src' => $vars['entity']->getIconUrl('master'),
+    'alt' => elgg_echo('avatar'),
+    'class' => 'mrl',
+    'id' => 'image',
+));
 $vars['image_to_crop'] = $master_img;
 
 // optionally assign custom aspectratio to overide the aspectratio in settings

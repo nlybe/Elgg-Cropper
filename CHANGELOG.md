@@ -1,6 +1,9 @@
 Elgg Cropper - CHANGE LOG
 ========================
 
+### 2.1.3 (2016-12-20)
+* Improved: documentation
+
 ### 2.1.2 (2016-12-07)
 * Fixed: removed unused graphics folder
 

@@ -18,7 +18,6 @@ function cropper_init() {
 
     // extend JS
     elgg_register_js('cropper', elgg_get_site_url() . 'mod/cropper/views/default/cropper/cropper.js');
-    //elgg_register_js('cropper_js', '//cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.js');
     elgg_define_js('cropper_js', array(
         'src' => "//cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.js", 
         'deps' => array('jquery'),

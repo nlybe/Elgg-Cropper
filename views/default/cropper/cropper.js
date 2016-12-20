@@ -37,7 +37,7 @@ define(function (require) {
         
         aspectratio = aspectratio_1/aspectratio_2;
     }
-    console.log(aspectratio);
+    //console.log(aspectratio);
     
     $(document).ready(function() {
 
@@ -80,7 +80,8 @@ define(function (require) {
             },
             built: function() {
                 var canvasData = imageBox.cropper('getCanvasData');
-                
+//                console.log(X1+','+X2+','+Y1+','+Y2);
+
                 var DefaultCropBoxOptionObj = {
                     left: X1+canvasData.left,
                     top: Y1+canvasData.top,
@@ -109,8 +110,7 @@ function getOptionValue(c_option) {
     }
     else if (c_option === 'on') {
         return true;
-    }
-    
+    }    
     
     return false;
 }
